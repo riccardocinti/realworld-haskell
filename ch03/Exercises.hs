@@ -34,7 +34,7 @@ isPalindrome list = head list == last list && isPalindrome (tail (init list))
 sortByLength :: Foldable t => [t a] -> [t a]
 sortByLength list = sortBy (\a b -> compare (length a) (length b)) list
 
--- 7
+-- 7.
 -- Define a function that joins a list of lists together using a separator value.
 -- The separator should appear between elements of the list, but it should not follow the last element. 
 myIntersperse :: a -> [[a]] -> [a]
