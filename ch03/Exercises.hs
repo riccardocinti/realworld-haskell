@@ -29,3 +29,15 @@ myIntersperse :: a -> [[a]] -> [a]
 myIntersperse _ [] = []
 myIntersperse _ [x] = x
 myIntersperse delim (x:xs) = x ++ [delim] ++ myIntersperse delim xs
+
+-- 8
+data Tree = Node {
+        value :: Int,
+        left :: Tree,
+        right :: Tree
+        } | Empty
+        deriving (Show)
+
+height :: Tree -> Int
+height (Node _ left right) = 1 + max (height left) (height right)
+height Empty = 0
